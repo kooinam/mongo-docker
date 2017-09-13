@@ -1,5 +1,5 @@
 node {
-    docker.withRegistry('https://hub.docker.com/r/kooinam/mrn-mongo/', '6da4bfc5-12fb-4165-982c-2c2423372ef6') {
+    docker.withRegistry('kooinam/mrn-mongo', '6da4bfc5-12fb-4165-982c-2c2423372ef6') {
 
         git url: "git@bitbucket.org:hickory_lab/mrn_mongo.git", credentialsId: 'b9bcb64d-45fa-47dc-96bf-97f4685f52fa'
 
