@@ -8,6 +8,10 @@ node {
         println commit_id
 
         stage "build"
-        sh "docker-compose build --no-cache"
+        def app = docker.build "mrn-mongo"
+
+        stage "publish"
+        app.push 'master'
+        app.push "${commit_id}"
     }
 }
