@@ -8,7 +8,7 @@ node {
         println commit_id
 
         stage "build"
-        def app = docker.build "kooinam/mrn-mongo"
+        def app = docker.build "kooinam/mrn-mongos"
 
         stage "publish"
         app.push 'master'
