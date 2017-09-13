@@ -11,7 +11,7 @@ node {
         def app = docker.build "kooinam/mrn-mongo"
 
         stage "publish"
-        app.push 'master'
+        app.push 'latest'
         app.push "${commit_id}"
     }
 }
